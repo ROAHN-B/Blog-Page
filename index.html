@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <style>
+      table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+    </style>
+    
+    <h1>Welcome to my Blog Page!</h1>
+    <img src="picture.jpeg.jpg" alt="picture" width="80" height="100" >
+
+    <p>Hi, My name is Rohan Belsare and I'm currently pursuingBTech degree from WIT solapur.
+        I am a passionate learner and a tech enthusiast. I love to learn new things and explore new technologies
+        and I am excited to share my knowledge with you all through this blog.<span id="dots">...</span><span id="more">
+            I am a Bachelor's student in Electronics and Computer Engineering at Walchand Institute of Technology, Solapur. 
+            I have a strong passion for programming, specializing in C and Python. My academic and project work has honed my skills in problem-solving, algorithm development, and embedded systems. 
+            I thrive on applying technical knowledge to practical applications and am keen to stay updated with the latest technological trends. I aim to contribute to innovative projects and collaborate with dynamic teams. 
+            Let's connect and explore opportunities to work together
+            
+        </span></p>
+        <table class="tb" id="mytable">
+            <tr>
+              <th>Semester</th>
+              <th>Percentage</th>
+              <th>CGPA</th>
+            </tr>
+            <tr>
+              <td>First</td>
+              <td>85.85%</td>
+              <td>9.58</td>
+            </tr>
+            <tr>
+              <td>Second</td>
+              <td>88.70%</td>
+              <td>9.91</td>
+            </tr>
+            <tr>
+              <td>Third</td>
+              <td>89.71%</td>
+              <td>9.73</td>
+            </tr>
+          </table>
+          
+          
+          <br />
+          <button onclick="toggle(this);">Hide table</button>
+        
+    
+    <button onclick="myFunction()" id="myBtn">Read more</button>
+    
+    
+    
+
+    <script >
+      function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+  
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+  }
+  let toggle = button => {
+    let element = document.getElementById("mytable");
+    let hidden = element.getAttribute("hidden");
+
+    if (hidden) {
+       element.removeAttribute("hidden");
+       button.innerText = "Hide table";
+    } else {
+       element.setAttribute("hidden", "hidden");
+       button.innerText = "Show table";
+    }
+  }
+         
+    </script>
+</body>
+</html>
